@@ -43,7 +43,58 @@ scene.onHitTile(SpriteKind.Player, 9, function (sprite) {
 })
 function level_8 () {
     music.powerUp.playUntilDone()
-    scene.setBackgroundColor(0)
+    scene.setBackgroundColor(9)
+    scene.setTileMap(img`
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+`)
+    scene.setTile(6, img`
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+6 6 6 6 c c 6 6 6 6 6 6 c c c c 
+c c c c c c c c c c c c c c c c 
+c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
+c c c c c c c c c c c 6 c 6 c c 
+6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
+6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
+c c c c c c c 7 6 6 c c c 6 c c 
+6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
+6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
+c c c c 7 7 6 c 6 c c 6 c 6 c c 
+6 6 c c c 7 6 c c c c 6 c c c c 
+7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
+7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
+6 7 7 6 c c c c 6 6 c c c 6 c c 
+`, true)
+    scene.setTile(12, img`
+. . b b b b b b b b b b b b . . 
+. b e 4 4 4 4 4 4 4 4 4 4 e b . 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e e 4 4 4 4 4 4 4 4 4 4 e e b 
+b e e e e e e e e e e e e e e b 
+b e e e e e e e e e e e e e e b 
+b b b b b b b d d b b b b b b b 
+c b b b b b b c c b b b b b b c 
+c c c c c c b c c b c c c c c c 
+b e e e e e c b b c e e e e e b 
+b e e e e e e e e e e e e e e b 
+b c e e e e e e e e e e e e c b 
+b b b b b b b b b b b b b b b b 
+. b b . . . . . . . . . . b b . 
+`, true)
+    mySprite.setPosition(132, 8)
+}
+function level_7 () {
+    music.powerUp.playUntilDone()
+    scene.setBackgroundColor(4)
     scene.setTileMap(img`
 . . . . . . . . . . 
 . . . . . . . . . . 
@@ -92,6 +143,9 @@ b b b b b b b b b b b b b b b b
 `, true)
     mySprite.setPosition(132, 8)
 }
+scene.onHitTile(SpriteKind.Player, 11, function (sprite) {
+	
+})
 function level_3 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(3)
@@ -143,108 +197,9 @@ b b b b b b b b b b b b b b b b
 `, true)
     mySprite.setPosition(24, 10)
 }
-function level_4 () {
-    music.powerUp.playUntilDone()
-    scene.setBackgroundColor(10)
-    scene.setTileMap(img`
-7 6 . . . 6 6 6 . . 
-. . . 6 . . 6 6 6 . 
-6 6 6 6 . 6 . . . . 
-6 6 6 . . 6 6 6 . . 
-. . . . 6 . 6 . . 6 
-. 6 6 6 6 6 . . 6 6 
-. 6 . 6 . . . 6 6 . 
-. . . . . 6 . . . . 
-`)
-    scene.setTile(6, img`
-c c c c c c c c c c c c c c c c 
-c c c c c c c c c c c c c c c c 
-6 6 6 6 c c 6 6 6 6 6 6 c c c c 
-c c c c c c c c c c c c c c c c 
-c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
-c c c c c c c c c c c 6 c 6 c c 
-6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
-6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
-c c c c c c c 7 6 6 c c c 6 c c 
-6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
-6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
-c c c c 7 7 6 c 6 c c 6 c 6 c c 
-6 6 c c c 7 6 c c c c 6 c c c c 
-7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
-7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
-6 7 7 6 c c c c 6 6 c c c 6 c c 
-`, true)
-    scene.setTile(7, img`
-. . b b b b b b b b b b b b . . 
-. b e 4 4 4 4 4 4 4 4 4 4 e b . 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e e 4 4 4 4 4 4 4 4 4 4 e e b 
-b e e e e e e e e e e e e e e b 
-b e e e e e e e e e e e e e e b 
-b b b b b b b d d b b b b b b b 
-c b b b b b b c c b b b b b b c 
-c c c c c c b c c b c c c c c c 
-b e e e e e c b b c e e e e e b 
-b e e e e e e e e e e e e e e b 
-b c e e e e e e e e e e e e c b 
-b b b b b b b b b b b b b b b b 
-. b b . . . . . . . . . . b b . 
-`, true)
-    mySprite.setPosition(137, 11)
-}
-function level_7 () {
-    music.powerUp.playUntilDone()
-    scene.setBackgroundColor(0)
-    scene.setTileMap(img`
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-`)
-    scene.setTile(6, img`
-c c c c c c c c c c c c c c c c 
-c c c c c c c c c c c c c c c c 
-6 6 6 6 c c 6 6 6 6 6 6 c c c c 
-c c c c c c c c c c c c c c c c 
-c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
-c c c c c c c c c c c 6 c 6 c c 
-6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
-6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
-c c c c c c c 7 6 6 c c c 6 c c 
-6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
-6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
-c c c c 7 7 6 c 6 c c 6 c 6 c c 
-6 6 c c c 7 6 c c c c 6 c c c c 
-7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
-7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
-6 7 7 6 c c c c 6 6 c c c 6 c c 
-`, true)
-    scene.setTile(10, img`
-. . b b b b b b b b b b b b . . 
-. b e 4 4 4 4 4 4 4 4 4 4 e b . 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e e 4 4 4 4 4 4 4 4 4 4 e e b 
-b e e e e e e e e e e e e e e b 
-b e e e e e e e e e e e e e e b 
-b b b b b b b d d b b b b b b b 
-c b b b b b b c c b b b b b b c 
-c c c c c c b c c b c c c c c c 
-b e e e e e c b b c e e e e e b 
-b e e e e e e e e e e e e e e b 
-b c e e e e e e e e e e e e c b 
-b b b b b b b b b b b b b b b b 
-. b b . . . . . . . . . . b b . 
-`, true)
-    mySprite.setPosition(132, 8)
-}
+scene.onHitTile(SpriteKind.Player, 14, function (sprite) {
+	
+})
 function level_2 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(7)
@@ -297,6 +252,9 @@ b b b b b b b b b b b b b b b b
 `, true)
     mySprite.setPosition(72, 11)
 }
+scene.onHitTile(SpriteKind.Player, 12, function (sprite) {
+	
+})
 function level_9 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(0)
@@ -328,7 +286,7 @@ c c c c 7 7 6 c 6 c c 6 c 6 c c
 7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
 6 7 7 6 c c c c 6 6 c c c 6 c c 
 `, true)
-    scene.setTile(10, img`
+    scene.setTile(11, img`
 . . b b b b b b b b b b b b . . 
 . b e 4 4 4 4 4 4 4 4 4 4 e b . 
 b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
@@ -348,12 +306,15 @@ b b b b b b b b b b b b b b b b
 `, true)
     mySprite.setPosition(132, 8)
 }
+scene.onHitTile(SpriteKind.Player, 8, function (sprite) {
+	
+})
 scene.onHitTile(SpriteKind.Player, 5, function (sprite) {
     level_4()
 })
 function level_10 () {
     music.powerUp.playUntilDone()
-    scene.setBackgroundColor(0)
+    scene.setBackgroundColor(13)
     scene.setTileMap(img`
 . . . . . . . . . . 
 . . . . . . . . . . 
@@ -382,7 +343,7 @@ c c c c 7 7 6 c 6 c c 6 c 6 c c
 7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
 6 7 7 6 c c c c 6 6 c c c 6 c c 
 `, true)
-    scene.setTile(10, img`
+    scene.setTile(14, img`
 . . b b b b b b b b b b b b . . 
 . b e 4 4 4 4 4 4 4 4 4 4 e b . 
 b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
@@ -404,16 +365,16 @@ b b b b b b b b b b b b b b b b
 }
 function level_6 () {
     music.powerUp.playUntilDone()
-    scene.setBackgroundColor(0)
+    scene.setBackgroundColor(1)
     scene.setTileMap(img`
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
+6 6 6 6 6 6 6 6 6 6 
+6 . . . . . . . . 6 
+6 . 6 6 6 6 6 6 . 6 
+6 . 6 6 8 6 . 6 . 6 
+6 . 6 . . . . 6 . 6 
+6 . 6 . 6 6 6 6 . 6 
+6 . 6 . . . . . . 6 
+. . 6 6 6 6 6 6 6 6 
 `)
     scene.setTile(6, img`
 c c c c c c c c c c c c c c c c 
@@ -451,11 +412,65 @@ b c e e e e e e e e e e e e c b
 b b b b b b b b b b b b b b b b 
 . b b . . . . . . . . . . b b . 
 `, true)
-    mySprite.setPosition(132, 8)
+    mySprite.setPosition(14, 105)
 }
+scene.onHitTile(SpriteKind.Player, 10, function (sprite) {
+	
+})
 scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     level_2()
 })
+function level_4 () {
+    music.powerUp.playUntilDone()
+    scene.setBackgroundColor(10)
+    scene.setTileMap(img`
+7 6 . . . 6 6 6 . . 
+. . . 6 . . 6 6 6 . 
+6 6 6 6 . 6 . . . . 
+6 6 6 . . 6 6 6 . . 
+. . . . 6 . 6 . . 6 
+. 6 6 6 6 6 . . 6 6 
+. 6 . 6 . . . 6 6 . 
+. . . . . 6 . . . . 
+`)
+    scene.setTile(6, img`
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+6 6 6 6 c c 6 6 6 6 6 6 c c c c 
+c c c c c c c c c c c c c c c c 
+c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
+c c c c c c c c c c c 6 c 6 c c 
+6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
+6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
+c c c c c c c 7 6 6 c c c 6 c c 
+6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
+6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
+c c c c 7 7 6 c 6 c c 6 c 6 c c 
+6 6 c c c 7 6 c c c c 6 c c c c 
+7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
+7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
+6 7 7 6 c c c c 6 6 c c c 6 c c 
+`, true)
+    scene.setTile(7, img`
+. . b b b b b b b b b b b b . . 
+. b e 4 4 4 4 4 4 4 4 4 4 e b . 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e e 4 4 4 4 4 4 4 4 4 4 e e b 
+b e e e e e e e e e e e e e e b 
+b e e e e e e e e e e e e e e b 
+b b b b b b b d d b b b b b b b 
+c b b b b b b c c b b b b b b c 
+c c c c c c b c c b c c c c c c 
+b e e e e e c b b c e e e e e b 
+b e e e e e e e e e e e e e e b 
+b c e e e e e e e e e e e e c b 
+b b b b b b b b b b b b b b b b 
+. b b . . . . . . . . . . b b . 
+`, true)
+    mySprite.setPosition(137, 11)
+}
 function level_5 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(8)
