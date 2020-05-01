@@ -18,31 +18,81 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile1 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
 }
-tiles.setTilemap(tiles.createTilemap(
-            hex`1000100001010101010101010101020202020101020102020202010202020201010101010101010101020101020101010202010101020202010201020201010202020101010201020102020102010102010202010102010201010101020101010102010101020202020202040102020202020101010101010101010101010101010101010102010100000200020101010102020101000101000101020102020202010202020202000201010101010101010101010101010101010202020102020202020201020202020101020101020101010101010202020101010202020201010203030102010101030101010101020201010101010103030103030302010101010104`,
-            img`
-. . . . . . . . . . . . . . . . 
-2 . 2 2 2 2 . 2 2 . . . . . . . 
-. . . . . 2 . . 2 . . . . . . . 
-. 2 2 2 . 2 . 2 2 . . . . . . . 
-. 2 . 2 . 2 2 . 2 . . . . . . . 
-. 2 . 2 . . . . 2 . . . . . . . 
-. 2 2 2 2 2 2 . . 2 . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`,
-            [myTiles.tile0,sprites.dungeon.floorMixed,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.chestClosed],
-            TileScale.Sixteen
-        ))
-info.setLife(4)
+function level_2 () {
+    music.powerUp.playUntilDone()
+    scene.setBackgroundColor(9)
+}
+scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
+    level_2()
+})
+music.baDing.playUntilDone()
+scene.setTileMap(img`
+. . . . . . . . . . 
+6 . 6 6 6 6 . 6 6 . 
+. . . . . 6 . . 6 . 
+. 6 6 6 . 6 . 6 6 . 
+. 6 . 6 . 6 6 . 6 . 
+. 6 . 6 . . . . 6 6 
+. 6 6 6 6 6 6 . 2 . 
+. . . . . . 6 6 . . 
+. . . . . . . . . . 
+`)
+scene.setTile(6, img`
+6 7 7 6 c c 6 c 6 6 c 6 c 6 c f 
+6 7 7 6 c 6 6 c 6 6 c 6 c c f c 
+6 7 c c c 7 6 c 6 6 c 6 c c 6 6 
+c c c 6 c 7 6 c 6 6 c c c c c c 
+c c 7 6 c 7 6 c 6 6 c c c 6 6 6 
+c 7 7 6 c 7 6 c 6 c c c c c c c 
+c 7 7 6 c 7 6 c c c c 6 6 6 6 6 
+6 7 7 6 c 7 6 c c c 6 6 6 6 6 6 
+6 7 7 6 c 6 c c c c c c c c c c 
+6 7 7 6 c c c c 6 6 6 6 6 6 c c 
+6 7 7 6 c c c 7 7 7 7 7 7 7 6 c 
+6 7 7 c c c c c c c c c c c c c 
+6 7 c c c 6 6 6 6 6 6 c 6 6 6 6 
+6 c c c 7 7 7 7 7 7 c c 7 7 7 7 
+c f c 7 7 7 7 7 7 7 c 7 7 7 7 7 
+f c 6 6 6 6 6 6 6 c c 6 6 6 6 6 
+`, true)
+scene.setTile(2, img`
+. . b b b b b b b b b b b b . . 
+. b e 4 4 4 4 4 4 4 4 4 4 e b . 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e e 4 4 4 4 4 4 4 4 4 4 e e b 
+b e e e e e e e e e e e e e e b 
+b e e e e e e e e e e e e e e b 
+b b b b b b b d d b b b b b b b 
+c b b b b b b c c b b b b b b c 
+c c c c c c b c c b c c c c c c 
+b e e e e e c b b c e e e e e b 
+b e e e e e e e e e e e e e e b 
+b c e e e e e e e e e e e e c b 
+b b b b b b b b b b b b b b b b 
+. b b . . . . . . . . . . b b . 
+`, true)
 let mySprite = sprites.create(img`
 . . . . f f f f f f f . . . . . 
 . . . . f f e e e f f . . . . . 
@@ -61,4 +111,5 @@ let mySprite = sprites.create(img`
 . . . . . 8 8 . 8 8 . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
+mySprite.setPosition(5, 10)
 controller.moveSprite(mySprite)

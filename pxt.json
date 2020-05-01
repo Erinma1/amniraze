@@ -1,7 +1,8 @@
 {
     "name": "Amniraze",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "color-coded-tilemap": "*"
     },
     "description": "",
     "files": [
