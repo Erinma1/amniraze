@@ -42,7 +42,7 @@ scene.onHitTile(SpriteKind.Player, 9, function (sprite) {
     level_6()
 })
 scene.onHitTile(SpriteKind.Player, 13, function (sprite) {
-    level_15()
+	
 })
 function level_4 () {
     music.powerUp.playUntilDone()
@@ -146,57 +146,6 @@ b b b b b b b b b b b b b b b b
 `, true)
     mySprite.setPosition(144, 105)
 }
-function level_15 () {
-    music.powerUp.playUntilDone()
-    scene.setBackgroundColor(1)
-    scene.setTileMap(img`
-6 . . . . . . . . . 
-7 7 7 7 7 7 7 7 7 . 
-. . . . . . . . 7 . 
-. 7 7 7 7 7 7 7 7 . 
-. 7 . . . . . . . . 
-. 7 7 7 7 7 7 7 7 . 
-. . . . 7 . . . 7 . 
-. . 7 . . . 7 . . . 
-`)
-    scene.setTile(7, img`
-c c c c c c c c c c c c c c c c 
-c c c c c c c c c c c c c c c c 
-6 6 6 6 c c 6 6 6 6 6 6 c c c c 
-c c c c c c c c c c c c c c c c 
-c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
-c c c c c c c c c c c 6 c 6 c c 
-6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
-6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
-c c c c c c c 7 6 6 c c c 6 c c 
-6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
-6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
-c c c c 7 7 6 c 6 c c 6 c 6 c c 
-6 6 c c c 7 6 c c c c 6 c c c c 
-7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
-7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
-6 7 7 6 c c c c 6 6 c c c 6 c c 
-`, true)
-    scene.setTile(6, img`
-. . b b b b b b b b b b b b . . 
-. b e 4 4 4 4 4 4 4 4 4 4 e b . 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e e 4 4 4 4 4 4 4 4 4 4 e e b 
-b e e e e e e e e e e e e e e b 
-b e e e e e e e e e e e e e e b 
-b b b b b b b d d b b b b b b b 
-c b b b b b b c c b b b b b b c 
-c c c c c c b c c b c c c c c c 
-b e e e e e c b b c e e e e e b 
-b e e e e e e e e e e e e e e b 
-b c e e e e e e e e e e e e c b 
-b b b b b b b b b b b b b b b b 
-. b b . . . . . . . . . . b b . 
-`, true)
-    mySprite.setPosition(121, 35)
-}
 function level_5 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(8)
@@ -252,7 +201,7 @@ scene.onHitTile(SpriteKind.Player, 11, function (sprite) {
     level_10()
 })
 scene.onHitTile(SpriteKind.Player, 3, function (sprite) {
-    level_14()
+	
 })
 function level_13 () {
     music.powerUp.playUntilDone()
@@ -309,62 +258,11 @@ scene.onHitTile(SpriteKind.Player, 14, function (sprite) {
     level_11()
 })
 scene.onHitTile(SpriteKind.Player, 6, function (sprite) {
-    effects.confetti.endScreenEffect()
+	
 })
 scene.onHitTile(SpriteKind.Player, 12, function (sprite) {
     level_9()
 })
-function level_14 () {
-    music.powerUp.playUntilDone()
-    scene.setBackgroundColor(3)
-    scene.setTileMap(img`
-6 6 . . 6 . . . 6 . 
-. . d . . 6 . 6 6 6 
-. 6 6 . . . 6 . 6 . 
-6 . 6 6 6 . . 6 . . 
-. 6 6 . . 6 . . . 6 
-6 . 6 . . . 6 . . 6 
-. . . 6 . . . 6 . 6 
-. 6 . . . . . . . 6 
-`)
-    scene.setTile(6, img`
-c c c c c c c c c c c c c c c c 
-c c c c c c c c c c c c c c c c 
-6 6 6 6 c c 6 6 6 6 6 6 c c c c 
-c c c c c c c c c c c c c c c c 
-c 6 6 6 6 6 6 6 6 6 6 6 c 6 c c 
-c c c c c c c c c c c 6 c 6 c c 
-6 6 6 c 6 6 6 6 6 6 c 6 c 6 c c 
-6 6 6 c 6 6 6 6 7 6 c c c 6 c c 
-c c c c c c c 7 6 6 c c c 6 c c 
-6 6 6 6 6 6 c c 6 6 c 6 c 6 c c 
-6 7 7 7 7 7 6 c 6 6 c 6 c 6 c c 
-c c c c 7 7 6 c 6 c c 6 c 6 c c 
-6 6 c c c 7 6 c c c c 6 c c c c 
-7 7 6 6 c 7 6 c 6 6 c 6 c c c c 
-7 7 7 6 c 6 c c 6 6 c 6 c 6 c c 
-6 7 7 6 c c c c 6 6 c c c 6 c c 
-`, true)
-    scene.setTile(13, img`
-. . b b b b b b b b b b b b . . 
-. b e 4 4 4 4 4 4 4 4 4 4 e b . 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e e 4 4 4 4 4 4 4 4 4 4 e e b 
-b e e e e e e e e e e e e e e b 
-b e e e e e e e e e e e e e e b 
-b b b b b b b d d b b b b b b b 
-c b b b b b b c c b b b b b b c 
-c c c c c c b c c b c c c c c c 
-b e e e e e c b b c e e e e e b 
-b e e e e e e e e e e e e e e b 
-b c e e e e e e e e e e e e c b 
-b b b b b b b b b b b b b b b b 
-. b b . . . . . . . . . . b b . 
-`, true)
-    mySprite.setPosition(16, 79)
-}
 function level_12 () {
     music.powerUp.playUntilDone()
     scene.setBackgroundColor(5)
@@ -484,7 +382,7 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     level_2()
 })
 scene.onHitTile(SpriteKind.Player, 1, function (sprite) {
-    level_13()
+    effects.confetti.endScreenEffect()
 })
 function level_6 () {
     music.powerUp.playUntilDone()
