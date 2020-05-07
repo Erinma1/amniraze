@@ -382,6 +382,8 @@ scene.onHitTile(SpriteKind.Player, 2, function (sprite) {
     level_2()
 })
 scene.onHitTile(SpriteKind.Player, 1, function (sprite) {
+    effects.confetti.startScreenEffect()
+    music.magicWand.playUntilDone()
     effects.confetti.endScreenEffect()
 })
 function level_6 () {
